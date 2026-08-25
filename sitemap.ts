@@ -1,0 +1,4 @@
+import type { MetadataRoute } from "next";
+import { posts } from "@/content/site";
+export const dynamic = "force-static";
+export default function sitemap():MetadataRoute.Sitemap { const base="https://sdgr.site"; const routes=["","/services","/products","/insights","/contact","/en","/en/services","/en/products","/en/insights","/en/contact"]; return [...routes.map(route=>({url:`${base}${route}`,lastModified:new Date(),changeFrequency:route.includes("insights")?"weekly" as const:"monthly" as const,priority:route===""?1:.8})),...posts.flatMap(post=>[{url:`${base}/insights/${post.slug}`,lastModified:new Date("2026-08-18"),changeFrequency:"monthly" as const,priority:.7},{url:`${base}/en/insights/${post.slug}`,lastModified:new Date("2026-08-18"),changeFrequency:"monthly" as const,priority:.7}])]; }
