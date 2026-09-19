@@ -1,0 +1,12 @@
+{
+  "name": "SD Group — Chơi ý tưởng, chạm thị trường",
+  "short_name": "SD Group",
+  "description": "Full-service digital agency và sản phẩm số dành cho SME Việt Nam.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fbff",
+  "theme_color": "#07163c",
+  "icons": [
+    { "src": "/brand/sd-group-logo.png", "sizes": "1280x1280", "type": "image/png" }
+  ]
+}
